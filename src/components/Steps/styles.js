@@ -1,6 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { checkRed, checkBlue, ellipsis, ellipsisGray, iconError } from './icon';
+import {
+  checkRed,
+  checkBlue,
+  ellipsis,
+  ellipsisGray,
+  iconError
+} from "../Icon";
 
 export const StepItem = styled.div`
   display: flex;
@@ -10,25 +16,25 @@ export const StepItem = styled.div`
     align-items: center;
     &.line-active {
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 14px;
         left: calc(50% + 15px);
         width: 100%;
         height: 2px;
-        background: #F54D4F;
+        background: #f54d4f;
       }
     }
     &.line-disabled {
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 14px;
         left: 50%;
         transform: translateY(-50%);
         width: 100%;
         height: 2px;
-        background: #F7D3D5;
+        background: #f7d3d5;
       }
     }
   }
@@ -36,18 +42,18 @@ export const StepItem = styled.div`
     padding-bottom: 23px;
     &.line-active {
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 18px;
         left: 8px;
         width: 2px;
         height: calc(100% - 18px);
-        background: #298BEA;
+        background: #298bea;
       }
     }
     &.line-disabled {
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 18px;
         left: 8px;
@@ -99,10 +105,10 @@ export const StepItem = styled.div`
       line-height: 18px;
     }
     &.icon-active {
-      background: #F54D4F;
+      background: #f54d4f;
     }
     &.icon-disabled {
-      background: #F7D3D5
+      background: #f7d3d5;
     }
     &.icon-pass-red {
       background-image: url(${checkRed});
@@ -123,7 +129,7 @@ export const StepItem = styled.div`
       height: 21px;
       margin-right: 6px;
       position: relative;
-      bottom: 2px;
+      bottom: 1px;
       right: 2px;
     }
     &.icon-error {
@@ -135,21 +141,25 @@ export const StepItem = styled.div`
     flex: 1;
     .title {
       font-size: 15px;
-      color: rgba(0,0,0,0.80);
-      line-height: 1;
-      &.title-active, &.title-pass-red {
+      color: rgba(0, 0, 0, 0.65);
+      &.title-active,
+      &.title-pass-red {
         font-size: 13px;
-        color: #F54D4F;
+        color: #f54d4f;
       }
       &.title-disabled {
         font-size: 13px;
-        color: #F7D3D5;
+        color: #f7d3d5;
+      }
+      &.title-process,
+      &.title-pass-blue {
+        color: rgba(0, 0, 0, 0.8);
       }
     }
     .desc {
       font-size: 13px;
-      color: rgba(0,0,0,0.45);
-      margin-top: 7px;
+      color: rgba(0, 0, 0, 0.45);
+      margin-top: 6px;
     }
   }
 `;
@@ -157,7 +167,8 @@ export const StepItem = styled.div`
 const StepBox = styled.div`
   display: flex;
   padding: 20px 0;
-  div, p {
+  div,
+  p {
     margin: 0;
   }
   &.column {

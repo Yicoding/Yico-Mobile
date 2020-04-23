@@ -23,6 +23,14 @@ export default function() {
         >
           文本域
         </ListItem>
+        <ListItem
+          arrow="horizontal"
+          onClick={() => {
+            routing.push("tab");
+          }}
+        >
+          标签页
+        </ListItem>
       </List>
     </Page>
   );

@@ -14,5 +14,10 @@ export default [
     path: "/textarea",
     async: () => import("~/pages/textarea"),
     exact: true
+  },
+  {
+    path: "/tab",
+    async: () => import("~/pages/tab"),
+    exact: true
   }
 ];
